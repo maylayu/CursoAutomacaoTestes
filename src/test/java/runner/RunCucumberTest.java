@@ -4,14 +4,13 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-//ESSA É A CLASSE QUE VAI RODAR OS TESTES!
 @RunWith(Cucumber.class)
 @CucumberOptions(
         //configurações do report de teste. Existem dois: um gerado pelo cucumber, básico
         //E outro que criamos quando rodamos o teste pelo terminal. Relatórios diferentes
         plugin = {},
         //Caminho dos arquivos .features (BDDs)
-        features = "D:\\Meus Documentos\\Arquivos\\CursoAutomacaoTestes\\src\\test\\resources\\features",
+        features = "D:/Meus Documentos/Arquivos/CursoAutomacaoTestes/src/test/resources/features",
         //Caso queira rodar cenarios especificos, colocar a tag e os que tiverem ela, rodarão
         //quando coloca '~' na frente, é o diferente, tudo que não ter a tag, rodará
         tags = {"~@ignore"},
@@ -19,4 +18,5 @@ import org.junit.runner.RunWith;
         glue = {"steps"}
 )
 public class RunCucumberTest {
+
 }
