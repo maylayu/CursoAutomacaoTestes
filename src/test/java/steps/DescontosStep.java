@@ -3,22 +3,24 @@ package steps;
 import cucumber.api.java.pt.Dados;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import runner.RunCucumberTest;
 
 import static org.openqa.selenium.By.id;
 
 
-public class DescontosStep {
-
-    WebDriver driver = new ChromeDriver();
+public class DescontosStep extends RunCucumberTest {
 
     @Dados("^que estou no site da qazando")
     public void acessar_site_qazando() throws InterruptedException {
         driver.get("https://qazando.com.br/curso.html");
         driver.manage().window().maximize();
+
+        Assert.assertEquals("Acessou a aplicação!",true, driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
 
     }
 
@@ -32,7 +34,7 @@ public class DescontosStep {
             e.printStackTrace();
         }
 
-        driver.findElement(id("email")).sendKeys("mayla.amaral@fatec.sp.gov.br");
+        driver.findElement(id("email")).sendKeys("yukiifullbuster@gmail.com");
 
     }
 
@@ -48,8 +50,7 @@ public class DescontosStep {
         // Write code here that turns the phrase above into concrete actions
         //# pra id e . pra select
         String texto_cupom = driver.findElement(By.cssSelector("#cupom > h2 > span")).getText();
-        System.out.println(texto_cupom);
-        //driver.quit();
+        Assert.assertEquals("Cupom correto!!","QAZANDO15OFF", texto_cupom);
     }
 
 
