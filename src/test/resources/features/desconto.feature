@@ -10,3 +10,6 @@
       Quando eu preencho meu email
       E clico em ganhar cupom
       Então eu vejo o código de desconto
+
+    Cenário: xpto
+      Dado que tenha cupom gerado

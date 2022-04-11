@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @CucumberOptions(
         //configurações do report de teste. Existem dois: um gerado pelo cucumber, básico
         //E outro que criamos quando rodamos o teste pelo terminal. Relatórios diferentes
-        plugin = {},
+        plugin = {"json:target/reports/cucumberReports.json", "html:target/reports/"},
         //Caminho dos arquivos .features (BDDs)
         features = "D:/Meus Documentos/Arquivos/CursoAutomacaoTestes/src/test/resources/features",
         //Caso queira rodar cenarios especificos, colocar a tag e os que tiverem ela, rodarão
@@ -26,12 +26,13 @@ public class RunCucumberTest {
     public static WebDriver driver;
 
     @BeforeClass
-    public static void start(){
+    public static void start() {
         System.out.println("Iniciou!");
         driver = new ChromeDriver();
     }
+
     @AfterClass
-    public static void stop(){
+    public static void stop() {
         System.out.println("Finalizou!");
         driver.quit();
     }
