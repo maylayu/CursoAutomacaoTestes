@@ -44,28 +44,28 @@ formatter.match({
   "location": "DescontosStep.acessar_site_qazando()"
 });
 formatter.result({
-  "duration": 3664889800,
+  "duration": 3478012800,
   "status": "passed"
 });
 formatter.match({
   "location": "DescontosStep.eu_preencho_meu_email()"
 });
 formatter.result({
-  "duration": 2292734000,
+  "duration": 2300843500,
   "status": "passed"
 });
 formatter.match({
   "location": "DescontosStep.clico_em_ganhar_cupom()"
 });
 formatter.result({
-  "duration": 103735800,
+  "duration": 136869300,
   "status": "passed"
 });
 formatter.match({
   "location": "DescontosStep.eu_vejo_o_código_de_desconto()"
 });
 formatter.result({
-  "duration": 90303300,
+  "duration": 107024000,
   "status": "passed"
 });
 formatter.scenario({
@@ -85,7 +85,7 @@ formatter.match({
   "location": "DescontosStep.gerarCupom()"
 });
 formatter.result({
-  "duration": 3660117800,
+  "duration": 3551691000,
   "status": "passed"
 });
 });

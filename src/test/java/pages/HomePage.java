@@ -16,6 +16,7 @@ public class HomePage extends Utils {
     }
 
     public void acessarAplicacao() {
+        System.setProperty("webdriver.chrome.whitelistedIps", "");
         driver.get("http://qazando.com.br/curso.html");
         esperarElementoEstarPresente(By.id("btn-ver-cursos"), 10);
         Assert.assertEquals("Não acessou a aplicação", true, driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
